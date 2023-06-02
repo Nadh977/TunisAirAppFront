@@ -30,7 +30,7 @@ import axios from "axios";
 export default {
   name: "DeleteCustomerModal",
   props: {
-    customerId: Number,
+    restaurantId: Number,
   },
   methods: {
     triggerClose() {
@@ -38,7 +38,7 @@ export default {
     },
     removeRestCompFromData() {
       axios
-          .delete(`http://localhost:8090/api/restaurationcompany/deleteRestaurationCompany/${this.customerId}`)
+          .delete(`http://localhost:8090/api/restaurationcompany/deleteRestaurationCompany/${this.restaurantId}`)
           .then(() => {
             this.$emit("reloadDataTable");
             this.$emit("showDeleteAlert");

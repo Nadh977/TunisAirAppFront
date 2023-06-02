@@ -101,7 +101,7 @@
           @closeEditModal="closeEditModal"
           @reloadDataTable="getDishData"
           @showSuccessAlert="showAlertUpdate"
-          :customerId="customerId"
+          :menuId="menuId"
       ></edit-customer-form>
     </b-modal>
 
@@ -116,7 +116,7 @@
           @closeDeleteModal="closeDeleteModal"
           @reloadDataTable="getDishData"
           @showDeleteAlert="showDeleteSuccessModal"
-          :customerId="customerId"
+          :menuId="menuId"
       ></delete-customer-modal>
     </b-modal>
   </div>
@@ -159,7 +159,7 @@ export default {
       numberOfCustomers: 0,
       activeCustomers: 0,
       activeCustomersData: [],
-      customerId: 0,
+      menuId: 0,
       companySearchTerm: "",
       tableHeader: "",
       showSuccessAlert: false,
@@ -192,7 +192,7 @@ export default {
     },
     getRowData(id) {
       this.$refs["edit-customer-modal"].show();
-      this.customerId = id;
+      this.menuId = id;
     },
     closeEditModal() {
       this.$refs["edit-customer-modal"].hide();
@@ -215,7 +215,7 @@ export default {
     },
     showDeleteModal(id) {
       this.$refs["delete-customer-modal"].show();
-      this.customerId = id;
+      this.menuId = id;
     },
     closeDeleteModal() {
       this.$refs["delete-customer-modal"].hide();

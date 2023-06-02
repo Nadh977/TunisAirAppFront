@@ -49,7 +49,7 @@ import axios from "axios";
 export default {
   name: "CreateCustomerModal",
   props: {
-    customerId: Number,
+    menuId: Number,
   },
   data() {
     return {
@@ -78,7 +78,7 @@ export default {
     },
     getMenuByID() {
       axios
-          .get(`http://localhost:8090/api/foodmenu/${this.customerId}`)
+          .get(`http://localhost:8090/api/foodmenu/${this.menuId}`)
           .then((response) => {
             this.menu = response.data;
           })
@@ -93,7 +93,7 @@ export default {
       });
       axios
           .put(
-              `http://localhost:8090/api/foodmenu/modifyFoodMenu/${this.customerId}`,
+              `http://localhost:8090/api/foodmenu/modifyFoodMenu/${this.menuId}`,
               this.menu
           )
           .then((response) => {
