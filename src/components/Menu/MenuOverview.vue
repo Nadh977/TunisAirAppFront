@@ -5,10 +5,7 @@
         <div
             style="color: #b02828"
             class="filter-card p-3"
-            :class="{
-            'bg-active-filter': totalIsActive,
-            'bg-light': !totalIsActive,
-          }"
+
             @click="totalCustomersIsActiveFilter"
         >
           <h6>Total Menus</h6>
