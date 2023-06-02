@@ -13,7 +13,7 @@
     </b-row>
     <b-row class="mt-4">
       <b-col>
-        <b-button variant="danger" @click="removeCustomerFromData"
+        <b-button variant="danger" @click="removeRestCompFromData"
         >Delete Restauration Company</b-button
         >
       </b-col>
@@ -36,7 +36,7 @@ export default {
     triggerClose() {
       this.$emit("closeDeleteModal");
     },
-    removeCustomerFromData() {
+    removeRestCompFromData() {
       axios
           .delete(`http://localhost:8090/api/restaurationcompany/deleteRestaurationCompany/${this.customerId}`)
           .then(() => {

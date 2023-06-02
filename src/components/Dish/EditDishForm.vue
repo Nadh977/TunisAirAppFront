@@ -40,7 +40,7 @@
 
     <b-row class="mt-4">
       <b-col cols="3">
-        <b-button variant="primary" class="px-5" @click="updateCustomer"
+        <b-button variant="primary" class="px-5" @click="updateDish"
         >Update Dish</b-button
         >
       </b-col>
@@ -65,13 +65,13 @@ export default {
     };
   },
   mounted() {
-    this.getCusomterByID();
+    this.getDishByID();
   },
   methods: {
     triggerClose() {
       this.$emit("closeEditModal");
     },
-    getCusomterByID() {
+    getDishByID() {
       axios
           .get(`http://localhost:8090/api/dish/${this.customerId}`)
           .then((response) => {
@@ -81,7 +81,7 @@ export default {
             console.log(error);
           });
     },
-    updateCustomer() {
+    updateDish() {
       axios
           .put(
               `http://localhost:8090/api/dish/modifyDish/${this.customerId}`,
