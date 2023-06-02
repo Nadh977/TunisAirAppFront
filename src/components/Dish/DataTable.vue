@@ -22,8 +22,8 @@
           <b-col cols="2">
             <b-row>
               <b-col>
-                <b-button
-                    variant="primary"
+                <b-button style="background-color: #b02828"
+                    variant="danger"
                     id="show-btn"
                     @click="showCreateModal"
                 >

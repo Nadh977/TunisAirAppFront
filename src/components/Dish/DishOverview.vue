@@ -1,13 +1,13 @@
 <template>
   <div>
-    <b-row class="text-center">
+    <b-row class="text-center" >
       <b-col>
         <div
+            style="color: #b02828"
             class="filter-card p-3"
-            :class="{
-            'bg-active-filter': totalIsActive,
-            'bg-light': !totalIsActive,
-          }"
+
+
+
             @click="totalCustomersIsActiveFilter"
         >
           <h6>Total Dishes</h6>
@@ -15,8 +15,6 @@
             <strong>{{ totalCustomers }}</strong>
           </h4>
         </div>
-      </b-col>
-      <b-col>
       </b-col>
     </b-row>
   </div>
@@ -46,13 +44,12 @@ export default {
 </script>
 
 <style>
+
 .filter-card:hover {
   cursor: pointer;
   text-decoration: underline;
+
 }
 
-.bg-active-filter {
-  background-color: #e9f1fe;
-  color: #074297;
-}
+
 </style>

@@ -3,6 +3,7 @@
     <b-row class="text-center">
       <b-col>
         <div
+            style="color: #b02828"
             class="filter-card p-3"
             :class="{
             'bg-active-filter': totalIsActive,
@@ -15,8 +16,6 @@
             <strong>{{ totalCustomers }}</strong>
           </h4>
         </div>
-      </b-col>
-      <b-col>
       </b-col>
     </b-row>
   </div>

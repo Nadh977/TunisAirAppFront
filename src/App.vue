@@ -6,18 +6,15 @@
         <router-view/>
       </b-row>
     </b-container>
-    <footer-bar v-if="shouldShowFooterBar"></footer-bar>
   </div>
 </template>
 
 <script>
 import HeaderBar from "@/components/HeaderBar.vue";
-import FooterBar from "@/components/FooterBar.vue";
 
 export default {
   components: {
     HeaderBar,
-    FooterBar,
   },
   computed: {
     shouldShowHeaderBar() {

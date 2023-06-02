@@ -15,13 +15,13 @@
               type="password"
               name="password"
               id="password"
-              placeholder="P@$$W0RD"
+              placeholder="password"
               v-model="password"
           />
         </div>
         <button class="button" id="done" type="submit">Done!</button>
       </form>
-      <p>Already have an account? <router-link to="/login">Log in here!</router-link></p>
+      <p>Already have an account? <router-link to="/">Log in here!</router-link></p>
     </div>
   </div>
 </template>
